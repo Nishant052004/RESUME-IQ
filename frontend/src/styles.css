@@ -1,49 +1,51 @@
-/* ===== ResumeIQ design system ===== */
+/* ===== ResumeIQ design system (Cyber Emerald & Oceanic Cyan Theme) ===== */
 :root {
-  --bg: #f8fafc;
+  --bg: #f0f7f9;
   --panel: #ffffff;
-  --panel-2: #f1f5f9;
-  --border: #e2e8f0;
-  --text: #0f172a;
-  --text-2: #475569;
-  --muted: #94a3b8;
-  --primary: #4f46e5;
-  --primary-2: #6366f1;
-  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #4338ca 100%);
-  --primary-soft: #eef2ff;
-  --success: #10b981;
-  --success-soft: #ecfdf5;
-  --warn: #f59e0b;
-  --warn-soft: #fffbeb;
-  --danger: #ef4444;
-  --danger-soft: #fef2f2;
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 10px 25px -5px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 20px 40px -15px rgba(79, 70, 229, 0.15);
+  --panel-2: #e6f2f5;
+  --border: #cbe3e8;
+  --text: #06283d;
+  --text-2: #155e75;
+  --muted: #64748b;
+  --primary: #0284c7;
+  --primary-2: #0d9488;
+  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #10b981 100%);
+  --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+  --primary-soft: #e0f2fe;
+  --success: #059669;
+  --success-soft: #d1fae5;
+  --warn: #d97706;
+  --warn-soft: #fef3c7;
+  --danger: #e11d48;
+  --danger-soft: #ffe4e6;
+  --shadow: 0 4px 20px -2px rgba(2, 132, 199, 0.08), 0 10px 30px -5px rgba(13, 148, 136, 0.05);
+  --shadow-lg: 0 20px 40px -10px rgba(2, 132, 199, 0.22);
   --radius: 16px;
-  --sidebar-bg: #ffffff;
+  --sidebar-bg: #f8fafc;
 }
 
 [data-theme="dark"] {
-  --bg: #090d16;
-  --panel: #111827;
-  --panel-2: #1f2937;
-  --border: #2d3748;
-  --text: #f8fafc;
-  --text-2: #94a3b8;
-  --muted: #64748b;
-  --primary: #818cf8;
-  --primary-2: #6366f1;
-  --primary-gradient: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #4f46e5 100%);
-  --primary-soft: #1e1b4b;
+  --bg: #050b14;
+  --panel: #0b1322;
+  --panel-2: #111c33;
+  --border: #1d2d4a;
+  --text: #f0f9ff;
+  --text-2: #7dd3fc;
+  --muted: #475569;
+  --primary: #38bdf8;
+  --primary-2: #34d399;
+  --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #34d399 50%, #a855f7 100%);
+  --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+  --primary-soft: #0c2a4a;
   --success: #34d399;
-  --success-soft: #064e3b;
+  --success-soft: #022c22;
   --warn: #fbbf24;
-  --warn-soft: #451a03;
-  --danger: #f87171;
-  --danger-soft: #451216;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 12px 30px -4px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-  --sidebar-bg: #0d111d;
+  --warn-soft: #3a2202;
+  --danger: #fb7185;
+  --danger-soft: #3f121a;
+  --shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.6), 0 12px 35px -4px rgba(56, 189, 248, 0.15);
+  --shadow-lg: 0 25px 60px -10px rgba(56, 189, 248, 0.25);
+  --sidebar-bg: #070e1b;
 }
 
 * { box-sizing: border-box; }
@@ -380,7 +382,7 @@ select.control { padding: 10px 14px; border: 1px solid var(--border); border-rad
 .main > * { animation: fadeUp 0.3s ease both; }
 
 .brand, .boot-logo {
-  background: linear-gradient(120deg, var(--primary) 20%, #a855f7 80%);
+  background: linear-gradient(120deg, #38bdf8 0%, #34d399 50%, #c084fc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -389,14 +391,22 @@ select.control { padding: 10px 14px; border: 1px solid var(--border); border-rad
   -webkit-text-fill-color: currentColor;
   background: none;
 }
-.hero-logo span { color: #c7d2fe; }
+.hero-logo span { color: #7dd3fc; }
 
-.card { transition: box-shadow 0.2s ease, border-color 0.2s ease; }
-.candidate-row:hover { box-shadow: 0 10px 28px rgba(23, 32, 58, 0.12); transform: translateY(-1px); }
-[data-theme="dark"] .candidate-row:hover { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); }
+.card { transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.candidate-row:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 
-.btn-primary { box-shadow: 0 6px 18px rgba(79, 70, 229, 0.28); }
-.btn-primary:hover { filter: brightness(1.06); }
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.48);
+  filter: brightness(1.08);
+}
 
 .stat:hover .value { letter-spacing: 0; }
 
