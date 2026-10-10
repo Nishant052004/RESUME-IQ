@@ -6,6 +6,22 @@ An AI-powered resume screening and candidate ranking platform that matches resum
 
 ---
 
+## 📸 Product Screenshots
+
+| Recruiter Dashboard | Explainable Candidate Deep-Dive |
+|:---:|:---:|
+| ![Recruiter Dashboard](docs/screenshots/02-dashboard.png) | ![Candidate Analysis](docs/screenshots/04-candidate-analysis.png) |
+
+| Skill & Score Analytics | Job Description & Resume Ingestion |
+|:---:|:---:|
+| ![Analytics](docs/screenshots/05-analytics.png) | ![Upload & JD](docs/screenshots/03-upload.png) |
+
+| Sign-In & Authentication |
+|:---:|
+| ![Sign In](docs/screenshots/01-login.png) |
+
+---
+
 ### Quick start
 
 ```bash

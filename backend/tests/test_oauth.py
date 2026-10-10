@@ -16,6 +16,8 @@ PROVIDER_PROFILE = {"email": "jane.doe@gmail.com", "name": "Jane Doe", "avatar":
 def google_configured(monkeypatch):
     monkeypatch.setattr(settings, "GOOGLE_CLIENT_ID", "test-google-id", raising=False)
     monkeypatch.setattr(settings, "GOOGLE_CLIENT_SECRET", "test-google-secret", raising=False)
+    monkeypatch.setattr(settings, "GITHUB_CLIENT_ID", "", raising=False)
+    monkeypatch.setattr(settings, "GITHUB_CLIENT_SECRET", "", raising=False)
 
 
 async def _exchange_ok(provider, code, redirect):
