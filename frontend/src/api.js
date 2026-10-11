@@ -21,6 +21,8 @@ export class ApiError extends Error {
   }
 }
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+
 async function request(path, { method = "GET", body, formData, headers = {} } = {}) {
   const token = getToken();
   const options = { method, headers: { ...headers } };
@@ -31,7 +33,8 @@ async function request(path, { method = "GET", body, formData, headers = {} } = 
     options.headers["Content-Type"] = "application/json";
     options.body = JSON.stringify(body);
   }
-  const response = await fetch(path, options);
+  const url = path.startsWith("http") ? path : `${API_BASE_URL}${path}`;
+  const response = await fetch(url, options);
   if (response.status === 204) return null;
   const text = await response.text();
   let data = null;

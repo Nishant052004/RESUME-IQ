@@ -1,0 +1,12 @@
+.git
+.github
+frontend/node_modules
+frontend/dist
+backend/__pycache__
+backend/.pytest_cache
+backend/resumeiq.db
+backend/tests
+backend/.env
+docs/
+.env
+.env.example
