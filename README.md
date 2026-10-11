@@ -1,5 +1,10 @@
 # ResumeIQ — AI Resume Screener
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://resume-iq-ymnd.onrender.com)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nishant052004/RESUME-IQ)
+
+> 🌐 **Live Demo:** [https://resume-iq-ymnd.onrender.com](https://resume-iq-ymnd.onrender.com)
+
 An AI-powered resume screening and candidate ranking platform that matches resumes against job descriptions using semantic (embedding/TF-IDF-based) analysis instead of plain keyword search — with explainable scores, a recruiter dashboard, PII redaction, bias-aware ranking, and human-in-the-loop review.
 
 **This repository is a working implementation of the module plan in `docs/PROJECT-PLAN.md`** (the original planning README). Every module (1–8) is implemented and tested; the pipeline runs fully offline with zero API keys, with optional LLM enhancement when a key is configured.
@@ -170,7 +175,7 @@ Interactive docs: `http://localhost:8000/docs` (Swagger UI).
 
 - PDF text extraction needs text-based PDFs — scanned/image-only resumes need OCR (planned).
 - Google/GitHub sign-in is fully implemented (`backend/app/auth/oauth.py`) — add your provider credentials to go live; accounts link by verified email.
-- Deployment targets (AWS/Render/Railway) are prepared via Docker but not pushed anywhere yet.
+- Deployed live on Render: [https://resume-iq-ymnd.onrender.com](https://resume-iq-ymnd.onrender.com).
 
 ## License
 
